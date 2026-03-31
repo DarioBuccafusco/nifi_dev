@@ -123,7 +123,7 @@
         "y" : 56.0
       },
       "properties" : {
-        "filename" : "test_1.txt",
+        "filename" : "test_change_name_from_Git.txt",
         "Store State" : "Do not store state",
         "Cache Value Lookup Cache Size" : "100"
       },
