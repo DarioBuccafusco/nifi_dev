@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1774953186586,
+    "description" : "First commit from NiFi",
+    "identifier" : "Test-flow",
+    "lastModifiedTimestamp" : 1774953186586,
+    "name" : "Test flow",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
