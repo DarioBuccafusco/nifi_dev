@@ -19,9 +19,9 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "d3b0b708-729f-31b4-95d4-86ef996a75f3",
-        "name" : "Funnel",
-        "type" : "FUNNEL"
+        "id" : "2c552f9c-3173-3d17-a42b-b3c5d92af185",
+        "name" : "UpdateAttribute",
+        "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
@@ -71,6 +71,36 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 1
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "d3b0b708-729f-31b4-95d4-86ef996a75f3",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "aa7cbbd2-964b-328d-910b-74cea2e75deb",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "2c552f9c-3173-3d17-a42b-b3c5d92af185",
+        "name" : "UpdateAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 3
     } ],
     "controllerServices" : [ ],
     "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -86,7 +116,7 @@
       "identifier" : "d3b0b708-729f-31b4-95d4-86ef996a75f3",
       "position" : {
         "x" : -88.0,
-        "y" : 312.0
+        "y" : 496.0
       }
     } ],
     "identifier" : "flow-contents-group",
@@ -120,7 +150,7 @@
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -240.0,
-        "y" : 56.0
+        "y" : 40.0
       },
       "properties" : {
         "filename" : "test_change_name_from_Git.txt",
@@ -140,6 +170,79 @@
           "dynamic" : true,
           "identifiesControllerService" : false,
           "name" : "filename",
+          "sensitive" : false
+        },
+        "Store State" : {
+          "displayName" : "Store State",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Store State",
+          "sensitive" : false
+        },
+        "Cache Value Lookup Cache Size" : {
+          "displayName" : "Cache Value Lookup Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Cache Value Lookup Cache Size",
+          "sensitive" : false
+        },
+        "Stateful Variables Initial Value" : {
+          "displayName" : "Stateful Variables Initial Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Stateful Variables Initial Value",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-update-attribute-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.8.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2c552f9c-3173-3d17-a42b-b3c5d92af185",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "UpdateAttribute",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -240.0,
+        "y" : 280.0
+      },
+      "properties" : {
+        "propert1" : "test_value",
+        "Store State" : "Do not store state",
+        "Cache Value Lookup Cache Size" : "100"
+      },
+      "propertyDescriptors" : {
+        "propert1" : {
+          "displayName" : "propert1",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "propert1",
+          "sensitive" : false
+        },
+        "Delete Attributes Expression" : {
+          "displayName" : "Delete Attributes Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Delete Attributes Expression",
           "sensitive" : false
         },
         "Store State" : {
@@ -275,6 +378,6 @@
   "snapshotMetadata" : {
     "author" : "52a4b2fa-3cdc-475d-af6a-8c6d4441b889",
     "flowIdentifier" : "Test-flow",
-    "timestamp" : 1774953187679
+    "timestamp" : 1775112707316
   }
 }
